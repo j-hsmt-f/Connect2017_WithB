@@ -68,6 +68,14 @@
             android:textColor="#000000"
             android:textSize="30dp" />
 
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#ff7f7f"
+            android:text="登録" />
+
     </LinearLayout>
 
     <GridView
