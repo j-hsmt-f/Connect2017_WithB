@@ -10,14 +10,14 @@ public class MainActivity extends AppCompatActivity {
 
     // 場所名
     private static final String[] place = {
-            "にゃんこ公園",
-            "場所名",
-            "場所名",
-            "ちくわ大明神",
-            "場所名",
-            "場所名",
-            "場所名",
-            "場所名"
+            "いろはにほへといろはにほへといろはにほへといろはにほへといろはにほへといろはにほへといろはにほへといろはにほへと",
+            "ちりぬるをちりぬるをちりぬるをちりぬるをちりぬるをちりぬるをちりぬるをちりぬるをちりぬるをちりぬるをちりぬるをちりぬるを",
+            "寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限寿限無寿限",
+            "誰だお前",
+            "隣の客はよく柿食う客だ隣の客はよく柿食う客だ隣の客はよく柿食う客だ隣の客はよく柿食う客だ隣の客はよく柿食う客だ隣の客はよく柿食う客だ隣の客はよく柿食う客だ隣の客はよく柿食う客だ隣の客はよく柿食う客だ",
+            "がががががががががががが",
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "AKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAKAK"
 
     };
 
