@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".DBActivity">
+
+    <Spinner
+        android:id="@+id/cboCat"
+        android:layout_width="221dp"
+        android:layout_height="23dp"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="19dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="54dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cboCat"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/cboCat"
+        android:layout_marginTop="27dp"
+        android:text="カテゴリ"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPlace"
+        android:layout_alignStart="@+id/txtPlace"
+        android:layout_below="@+id/cboCat"
+        android:layout_marginTop="24dp"
+        android:text="場所名"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <EditText
+        android:id="@+id/txtPlace"
+        android:layout_width="365dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <Button
+        android:id="@+id/btnRegist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnShow"
+        android:layout_alignBottom="@+id/btnShow"
+        android:layout_marginLeft="58dp"
+        android:layout_marginStart="58dp"
+        android:layout_toEndOf="@+id/btnShow"
+        android:layout_toRightOf="@+id/btnShow"
+        android:text="登録"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="447dp" />
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="68dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="中身"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="447dp" />
+
+    <Button
+        android:id="@+id/btnAlldelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cboCat"
+        android:layout_alignRight="@+id/cboCat"
+        android:layout_below="@+id/btnRegist"
+        android:text="全削除" />
+
+    <TextView
+        android:id="@+id/lblPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPlace"
+        android:layout_alignStart="@+id/txtPlace"
+        android:layout_below="@+id/txtPlace"
+        android:layout_marginTop="43dp"
+        android:text="画像" />
+
+    <Button
+        android:id="@+id/btnFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblPic"
+        android:layout_alignStart="@+id/lblPic"
+        android:layout_below="@+id/lblPic"
+        android:text="参照" />
+
+</RelativeLayout>
