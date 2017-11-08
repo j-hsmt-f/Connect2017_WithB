@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Connect2017_WithB.iml" filepath="$PROJECT_DIR$/Connect2017_WithB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Connect2017_With.iml" filepath="$PROJECT_DIR$/Connect2017_With.iml" />
+      <module fileurl="file://C:\Users\Administrator\AndroidStudioProjects\Connect2017_With\Connect2017_WithB.iml" filepath="C:\Users\Administrator\AndroidStudioProjects\Connect2017_With\Connect2017_WithB.iml" />
       <module fileurl="file://C:\Users\jun_hasimoto\AndroidStudioProjects\test\Connect2017_WithB\ShareApp.iml" filepath="C:\Users\jun_hasimoto\AndroidStudioProjects\test\Connect2017_WithB\ShareApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\jun_hasimoto\AndroidStudioProjects\test\Connect2017_WithB\app\app.iml" filepath="C:\Users\jun_hasimoto\AndroidStudioProjects\test\Connect2017_WithB\app\app.iml" />
