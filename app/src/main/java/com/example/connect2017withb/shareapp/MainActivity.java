@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "登録");
+                Intent intent = new Intent(getApplicationContext(), DBActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 }
