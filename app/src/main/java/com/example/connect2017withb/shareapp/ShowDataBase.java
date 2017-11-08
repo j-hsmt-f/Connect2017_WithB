@@ -3,8 +3,10 @@ package com.example.connect2017withb.shareapp;
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,7 +22,7 @@ public class ShowDataBase extends AppCompatActivity {
         MyOpenHelper helper = new MyOpenHelper(this);
         SQLiteDatabase db = helper.getReadableDatabase();
         // queryメソッドの実行例
-        Cursor c = db.query("person", new String[] { "name", "category" }, null,
+        Cursor c = db.query("person", new String[] { "name", "category", "pic" }, null,
                 null, null, null, null);
 
         boolean mov = c.moveToFirst();
@@ -28,8 +30,11 @@ public class ShowDataBase extends AppCompatActivity {
         while (mov) {
             TextView textView = new TextView(this);
             textView.setText(String.format("%s:%s ", c.getString(0), c.getString(1)));
+            ImageView imageView = new ImageView(this);
+            imageView.setImageBitmap(BitmapFactory.decodeByteArray(c.getBlob(2), 0, c.getBlob(2).length));
             mov = c.moveToNext();
             layout.addView(textView);
+            layout.addView(imageView);
         }
         c.close();
         db.close();

@@ -11,7 +11,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table person(" + " name text not null," + "category text" + ");");
+        db.execSQL("create table person(" + " name text not null," + "category text," + " pic blob " + ");");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
