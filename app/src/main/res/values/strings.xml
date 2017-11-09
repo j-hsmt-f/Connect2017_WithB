@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">観光地共有アプリ(仮)</string>
+    <string name="title_activity_db">DBActivity</string>
 </resources>
