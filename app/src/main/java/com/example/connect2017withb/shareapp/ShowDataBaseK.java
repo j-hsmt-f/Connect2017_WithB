@@ -7,36 +7,30 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class ShowDataBase extends Activity {
+public class ShowDataBaseK extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.show_database);
+        setContentView(R.layout.show_database_k);
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         setContentView(layout);
-        MyOpenHelper helper = new MyOpenHelper(this);
+        MyOpenHelperK helper = new MyOpenHelperK(this);
         SQLiteDatabase db = helper.getReadableDatabase();
         // queryメソッドの実行例
-        Cursor c = db.query("place", new String[] { "name", "category", "pic" }, null,
+        Cursor c = db.query("kuchikomi", new String[] { "name", "kuchikomi" }, null,
         null, null, null, null);
 
         boolean mov = c.moveToFirst();
 
         while (mov) {
             TextView textView = new TextView(this);
-            textView.setText(String.format("%s:%s ", c.getString(0), c.getString(1)));
-            ImageView imageView = new ImageView(this);
-            if (c.getBlob(2) == null) {
-            } else {
-                imageView.setImageBitmap(BitmapFactory.decodeByteArray(c.getBlob(2), 0, c.getBlob(2).length));
-            }
+            //textView.setText(String.format("%s:%s ", c.getString(0), c.getString(1)));
+            textView.setText("aaaaa");
             mov = c.moveToNext();
             layout.addView(textView);
-            layout.addView(imageView);
         }
         c.close();
         db.close();

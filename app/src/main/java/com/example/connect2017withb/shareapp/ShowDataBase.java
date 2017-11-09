@@ -21,7 +21,7 @@ public class ShowDataBase extends Activity {
         MyOpenHelper helper = new MyOpenHelper(this);
         SQLiteDatabase db = helper.getReadableDatabase();
         // queryメソッドの実行例
-        Cursor c = db.query("person", new String[] { "name", "category", "pic" }, null,
+        Cursor c = db.query("place", new String[] { "name", "category", "pic" }, null,
         null, null, null, null);
 
         boolean mov = c.moveToFirst();
