@@ -44,7 +44,7 @@
         tools:layout_editor_absoluteY="103dp" />
 
     <EditText
-        android:id="@+id/txtKuchi"
+        android:id="@+id/txtPlace"
         android:layout_width="365dp"
         android:layout_height="42dp"
         android:layout_below="@+id/textView3"
@@ -56,7 +56,7 @@
         tools:layout_editor_absoluteY="132dp" />
 
     <Button
-        android:id="@+id/btnEntry"
+        android:id="@+id/btnRegist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btnShow"
