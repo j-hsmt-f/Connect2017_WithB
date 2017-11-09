@@ -82,7 +82,8 @@ public class DBActivity extends Activity {
         detaBaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, ShowDataBase.class);
+                //Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, ShowDataBase.class);
+                Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, KuchiActivity.class);
                 startActivity(dbIntent);
             }
         });

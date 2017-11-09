@@ -12,10 +12,10 @@
         android:id="@+id/cboCat"
         android:layout_width="221dp"
         android:layout_height="30dp"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3"
+        android:layout_alignLeft="@+id/txtPlace"
+        android:layout_alignStart="@+id/txtPlace"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="17dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="54dp" />
 
@@ -85,28 +85,29 @@
         android:id="@+id/btnAlldelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/cboCat"
-        android:layout_alignRight="@+id/cboCat"
-        android:layout_below="@+id/btnEntry"
+        android:layout_alignEnd="@+id/txtPlace"
+        android:layout_alignRight="@+id/txtPlace"
+        android:layout_below="@+id/imageView"
         android:text="全削除" />
 
     <TextView
         android:id="@+id/lblPic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtKuchi"
-        android:layout_alignStart="@+id/txtKuchi"
-        android:layout_below="@+id/txtKuchi"
-        android:layout_marginTop="43dp"
+        android:layout_alignLeft="@+id/txtPlace"
+        android:layout_alignStart="@+id/txtPlace"
+        android:layout_below="@+id/txtPlace"
+        android:layout_marginTop="18dp"
         android:text="画像" />
 
     <Button
         android:id="@+id/btnFile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lblPic"
-        android:layout_alignStart="@+id/lblPic"
-        android:layout_below="@+id/lblPic"
+        android:layout_alignLeft="@+id/txtPlace"
+        android:layout_alignStart="@+id/txtPlace"
+        android:layout_below="@+id/txtPlace"
+        android:layout_marginTop="51dp"
         android:text="参照" />
 
     <ImageView
