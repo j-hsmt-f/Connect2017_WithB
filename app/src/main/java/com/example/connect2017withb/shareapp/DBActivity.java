@@ -9,8 +9,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.provider.ContactsContract;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,10 +22,9 @@ import android.widget.Spinner;
 import java.net.*;
 
 import java.io.*;
-
 import static android.graphics.Bitmap.createScaledBitmap;
 
-public class DBActivity extends AppCompatActivity {
+public class DBActivity extends Activity {
 
     public static Bitmap Pic;
 
@@ -36,7 +33,7 @@ public class DBActivity extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_db);
 
         //deleteDatabase("NameAgeDB");
 
@@ -52,12 +49,18 @@ public class DBActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = placeText.getText().toString();
                 Spinner spinner = findViewById(R.id.cboCat);
-                String item = (String) spinner.getSelectedItem();
+                String item = (String)spinner.getSelectedItem();
+                byte[] bitmapdata;
 
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                Pic.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-                byte[] bitmapdata = stream.toByteArray();
+                if (Pic != null) {
 
+                    Pic.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                    bitmapdata = stream.toByteArray();
+
+                } else {
+                    bitmapdata = null;
+                }
                 ContentValues insertValues = new ContentValues();
                 insertValues.put("name", name);
                 insertValues.put("category", item);
@@ -105,12 +108,13 @@ public class DBActivity extends AppCompatActivity {
         });
 
 
+
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
 
-        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        ImageView imageView = (ImageView)findViewById(R.id.imageView);
 
         if (requestCode == 1001 && resultCode == Activity.RESULT_OK) {
 
@@ -128,7 +132,6 @@ public class DBActivity extends AppCompatActivity {
             }
         }
     }
-
     private Bitmap getBitmapFromUri(Uri uri) throws IOException {
         ParcelFileDescriptor parcelFileDescriptor =
                 getContentResolver().openFileDescriptor(uri, "r");
@@ -137,4 +140,5 @@ public class DBActivity extends AppCompatActivity {
         parcelFileDescriptor.close();
         return image;
     }
+
 }
