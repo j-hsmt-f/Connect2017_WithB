@@ -5,9 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="0dp"
-    tools:context=".MoreActivity">
+    tools:context=".MainActivity">
 
-    <LinearLayout
+
+<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="#ff7a7a"
@@ -62,47 +63,34 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="郡山市青少年会館"
+
+            android:text="食べる"
             android:textColor="#000000"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:background="#ff7a7a"
-            android:text="くちこむ" />
+            android:background="#ff7f7f"
+            android:text="登録" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <GridView
+        android:background="#dfdfdf"
+        android:id="@+id/gridview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal" >
-
-        <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="口コミ一覧" />
-
-        <Button
-            android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="画像一覧" />
-
-    </LinearLayout>
-
-
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-    </ListView>
-
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:minHeight="100dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp" />
 
 </LinearLayout>
+
+

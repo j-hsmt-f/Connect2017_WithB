@@ -10,39 +10,39 @@ public class MoreActivity extends AppCompatActivity {
 
     // 名前
     private static final String[] name = {
-            "いち",
-            "に",
-            "さん",
-            "ちくわ大明神",
-            "名前",
-            "名前",
-            "名前",
-            "名前"
+            "高橋",
+            "渡邉",
+            "橋本",
+            "吉田",
+            "矢内",
+            "関根",
+            "ぽむぽむ",
+            "ぷりん"
     };
 
     // 口コミ
     private static final String[] word = {
-            "にゃんこ公園",
-            "猪苗代湖",
-            "TSUTAYA桑野店",
-            "ちくわ大明神",
-            "場所名",
-            "場所名",
-            "場所名",
-            "場所名"
+            "職場の信条",
+            "明朗な職場は朝夕の挨拶から",
+            "計画を密にし、常に研鑽に努める",
+            "責任と勇気と情熱を持って仕事にあたる",
+            "性格迅速を信条とし品質の向上を図る",
+            "交通事故の絶無を期する",
+            "サンリオ",
+            "ピューロランド"
 
     };
 
     // サムネイル
     private static final int[] photos = {
-            R.drawable.fukei_mura,
-            R.drawable.fukei_mura,
-            R.drawable.fukei_mura,
-            R.drawable.fukei_mura,
-            R.drawable.fukei_mura,
-            R.drawable.fukei_mura,
-            R.drawable.fukei_mura,
-            R.drawable.fukei_mura
+            R.drawable.pom,
+            R.drawable.pom,
+            R.drawable.pom,
+            R.drawable.pom,
+            R.drawable.pom,
+            R.drawable.pom,
+            R.drawable.pom,
+            R.drawable.pom
     };
 
     @Override
@@ -54,9 +54,9 @@ public class MoreActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.list_view);
 
         // BaseAdapter を継承したadapterのインスタンスを生成
-        // レイアウトファイル list.xml を more      // inflate するためにadapterに引数として渡す
+        // レイアウトファイル more_list.xmlをinflate するためにadapterに引数として渡す
         adapter = new ListViewAdapter(this.getApplicationContext(),
-                R.layout.list, name, word, photos);
+                R.layout.more_list, name, word, photos);
 
         // ListViewにadapterをセット
         listView.setAdapter(adapter);
