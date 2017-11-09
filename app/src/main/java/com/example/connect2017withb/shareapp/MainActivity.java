@@ -15,8 +15,6 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
-    // test push
-
     private TextView fukei_mura;
     private final static String TAG = MainActivity.class.getSimpleName();
 
