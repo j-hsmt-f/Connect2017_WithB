@@ -27,8 +27,8 @@ public class ShowDataBaseK extends Activity {
 
         while (mov) {
             TextView textView = new TextView(this);
-            //textView.setText(String.format("%s:%s ", c.getString(0), c.getString(1)));
-            textView.setText("aaaaa");
+            textView.setText(String.format("%s:%s ", c.getString(0), c.getString(1)));
+            //textView.setText("aaaaa");
             mov = c.moveToNext();
             layout.addView(textView);
         }

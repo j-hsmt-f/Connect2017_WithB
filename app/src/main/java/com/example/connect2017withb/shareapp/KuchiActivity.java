@@ -24,7 +24,7 @@ public class KuchiActivity extends Activity {
             MyOpenHelperK helper = new MyOpenHelperK(this);
             final SQLiteDatabase db = helper.getWritableDatabase();
 
-            final EditText txtName = (EditText) findViewById(R.id.txtKuchi);
+            final EditText txtName = (EditText) findViewById(R.id.txtName);
             final EditText txtKuchi = (EditText) findViewById(R.id.txtKuchi);
 
             Button entryButton = (Button) findViewById(R.id.btnEntry);
