@@ -1,15 +1,11 @@
 package com.example.connect2017withb.shareapp;
-import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.view.View.OnClickListener;
 
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.content.Intent;
 
@@ -22,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    //    setContentView(R.layout.grid_item_hue);
 
         GridView gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new HueAdapter(this));
@@ -51,16 +46,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        gridView.setClickable(true);
-//        gridView.setOnClickListener(new View.OnClickListener() {
-//
-//            // クリック時に呼ばれるメソッド
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-
+        gridView.setAdapter(new HueAdapter(this));
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            // クリック時に呼ばれるメソッド
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
