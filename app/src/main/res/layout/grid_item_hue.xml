@@ -2,7 +2,8 @@
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="100dp"
-        android:layout_height="100dp">
+        android:layout_height="100dp"
+        tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/hue_imageview"
@@ -11,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="4dp"
         android:background="#000000"
-        android:onClick="onClick" />
+       />
 
     <TextView
         android:id="@+id/hue_textview"
@@ -23,7 +24,7 @@
         android:text="000000"
         android:textSize="14dp"
         android:clickable="true"
-        tools:onClick="onClick" />
+         />
 
 
 </RelativeLayout>
