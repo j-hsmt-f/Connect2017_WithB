@@ -30,8 +30,7 @@ public class ShowDataBase extends Activity {
             TextView textView = new TextView(this);
             textView.setText(String.format("%s:%s ", c.getString(0), c.getString(1)));
             ImageView imageView = new ImageView(this);
-            if (c.getBlob(2) == null) {
-            } else {
+            if (c.getBlob(2) != null) {
                 imageView.setImageBitmap(BitmapFactory.decodeByteArray(c.getBlob(2), 0, c.getBlob(2).length));
             }
             mov = c.moveToNext();

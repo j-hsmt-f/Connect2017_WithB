@@ -49,15 +49,15 @@
         android:id="@+id/btnEntry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnAlldelete"
-        android:layout_alignBottom="@+id/btnAlldelete"
+        android:layout_alignBaseline="@+id/btnAlldeleteK"
+        android:layout_alignBottom="@+id/btnAlldeleteK"
         android:layout_centerHorizontal="true"
         android:text="登録"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="447dp" />
 
     <Button
-        android:id="@+id/btnAlldelete"
+        android:id="@+id/btnAlldeleteK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -67,15 +67,6 @@
         android:layout_toEndOf="@+id/btnEntry"
         android:layout_toRightOf="@+id/btnEntry"
         android:text="全削除" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnFile"
-        android:layout_alignStart="@+id/btnFile"
-        android:layout_below="@+id/btnFile"
-        android:layout_marginTop="21dp" />
 
     <EditText
         android:id="@+id/txtName"
@@ -90,13 +81,43 @@
         android:text="Name" />
 
     <Button
-        android:id="@+id/btnShow"
+        android:id="@+id/btnShowK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnAlldelete"
+        android:layout_alignLeft="@+id/btnAlldeleteK"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btnAlldelete"
+        android:layout_alignStart="@+id/btnAlldeleteK"
         android:layout_marginBottom="13dp"
         android:text="中身" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtKuchi"
+        android:layout_alignStart="@+id/txtKuchi"
+        android:layout_below="@+id/txtKuchi"
+        android:layout_marginTop="31dp"
+        android:text="写真" />
+
+    <Button
+        android:id="@+id/btnPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="16dp"
+        android:text="参照" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnPic"
+        android:layout_alignStart="@+id/btnPic"
+        android:layout_below="@+id/btnPic"
+        android:layout_marginBottom="24dp" />
+
 
 </RelativeLayout>

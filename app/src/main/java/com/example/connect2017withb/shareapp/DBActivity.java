@@ -8,18 +8,13 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
-import android.provider.ContactsContract;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Spinner;
-import java.net.*;
 
 import java.io.*;
 import static android.graphics.Bitmap.createScaledBitmap;
@@ -35,7 +30,7 @@ public class DBActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_db);
 
-        //deleteDatabase("NameAgeDB");
+        //deleteDatabase("PlaceDB");
 
         MyOpenHelper helper = new MyOpenHelper(this);
         final SQLiteDatabase db = helper.getWritableDatabase();
@@ -65,7 +60,7 @@ public class DBActivity extends Activity {
                 insertValues.put("name", name);
                 insertValues.put("category", item);
                 insertValues.put("pic", bitmapdata);
-                long id = db.insert("person", name, insertValues);
+                long id = db.insert("place", name, insertValues);
             }
         });
 
@@ -73,7 +68,7 @@ public class DBActivity extends Activity {
         deleteAllButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                db.delete("person", null, null);
+                db.delete("place", null, null);
 
             }
         });
@@ -82,8 +77,8 @@ public class DBActivity extends Activity {
         detaBaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, ShowDataBase.class);
-                Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, KuchiActivity.class);
+                Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, ShowDataBase.class);
+                //Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, KuchiActivity.class);
                 startActivity(dbIntent);
             }
         });

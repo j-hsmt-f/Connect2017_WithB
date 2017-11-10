@@ -20,7 +20,7 @@ public class ShowDataBaseK extends Activity {
         MyOpenHelperK helper = new MyOpenHelperK(this);
         SQLiteDatabase db = helper.getReadableDatabase();
         // queryメソッドの実行例
-        Cursor c = db.query("kuchikomi", new String[] { "name", "kuchikomi" }, null,
+        Cursor c = db.query("kuchikomi", new String[] { "name", "kuchikomi", "pic" }, null,
         null, null, null, null);
 
         boolean mov = c.moveToFirst();
@@ -28,9 +28,13 @@ public class ShowDataBaseK extends Activity {
         while (mov) {
             TextView textView = new TextView(this);
             textView.setText(String.format("%s:%s ", c.getString(0), c.getString(1)));
-            //textView.setText("aaaaa");
+            ImageView imageView = new ImageView(this);
+            if (c.getBlob(2) != null) {
+                imageView.setImageBitmap(BitmapFactory.decodeByteArray(c.getBlob(2), 0, c.getBlob(2).length));
+            }
             mov = c.moveToNext();
             layout.addView(textView);
+            layout.addView(imageView);
         }
         c.close();
         db.close();

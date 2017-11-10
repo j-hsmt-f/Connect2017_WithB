@@ -10,10 +10,10 @@ public class MyOpenHelperK extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table kuchikomi(" + " name text," + "kuchikomi text" + ");");
+        db.execSQL("create table kuchikomi(" + " name text," + "kuchikomi text," + " pic blob " + ");");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //db.execSQL("drop table person");
+        //db.execSQL("drop table Kuchikomi");
     }
 }
