@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
+                intent.putExtra("gridId", position);
                 startActivity(intent);
             }
         });

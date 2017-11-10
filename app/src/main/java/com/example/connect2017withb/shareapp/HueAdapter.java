@@ -19,7 +19,7 @@ public class HueAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mLayoutInflater;
     private String[] mHueArray = {
-            "fukei_mura", "リカチャンキャッスル", "磐梯熱海温泉",
+            "fukei_mura", "リカチャン", "磐梯熱海温泉",
             "郡山市ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
     };
     private Integer[] mHueIdArray = {

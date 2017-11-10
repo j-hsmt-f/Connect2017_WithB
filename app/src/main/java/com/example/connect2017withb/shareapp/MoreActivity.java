@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MoreActivity extends AppCompatActivity {
 
@@ -48,9 +49,18 @@ public class MoreActivity extends AppCompatActivity {
             R.drawable.pom
     };
 
+    private String[] mHueArray = {
+            "fukei_mura", "リカチャン", "磐梯熱海温泉",
+            "郡山市ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        int gridPos = intent.getIntExtra("gridId", 0);
+
         setContentView(R.layout.more);
 
         // ListViewのインスタンスを生成
@@ -63,6 +73,10 @@ public class MoreActivity extends AppCompatActivity {
 
         // ListViewにadapterをセット
         listView.setAdapter(adapter);
+
+        TextView title= (TextView)findViewById(R.id.titleText);
+        title.setText(mHueArray[gridPos]);
+
 
         Button button = (Button) findViewById(R.id.button7);
         // ボタンに OnClickListener インターフェースを実装する
