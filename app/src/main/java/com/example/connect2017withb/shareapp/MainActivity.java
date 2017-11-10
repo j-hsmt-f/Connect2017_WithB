@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    //    setContentView(R.layout.grid_item_hue);
 
         GridView gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new HueAdapter(this));
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
+                Intent intent = new Intent(getApplicationContext(), DBActivity.class);
                 startActivity(intent);
             }
         });
@@ -41,6 +42,17 @@ public class MainActivity extends AppCompatActivity {
         TextView hue_tv= (TextView)findViewById(R.id.text);
         hue_tv.setClickable(true);
         hue_tv.setOnClickListener(new View.OnClickListener() {
+
+            // クリック時に呼ばれるメソッド
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        gridView.setClickable(true);
+        gridView.setOnClickListener(new View.OnClickListener() {
 
             // クリック時に呼ばれるメソッド
             @Override
