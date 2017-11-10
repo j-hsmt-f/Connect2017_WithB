@@ -15,8 +15,6 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
-    // test push
-
     private TextView fukei_mura;
     private final static String TAG = MainActivity.class.getSimpleName();
 
@@ -35,7 +33,19 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), DBActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView hue_tv= (TextView)findViewById(R.id.text);
+        hue_tv.setClickable(true);
+        hue_tv.setOnClickListener(new View.OnClickListener() {
+
+            // クリック時に呼ばれるメソッド
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
                 startActivity(intent);
             }
         });
