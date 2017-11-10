@@ -51,16 +51,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        gridView.setClickable(true);
-        gridView.setOnClickListener(new View.OnClickListener() {
-
-            // クリック時に呼ばれるメソッド
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
-                startActivity(intent);
-            }
-        });
+//        gridView.setClickable(true);
+//        gridView.setOnClickListener(new View.OnClickListener() {
+//
+//            // クリック時に呼ばれるメソッド
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }
