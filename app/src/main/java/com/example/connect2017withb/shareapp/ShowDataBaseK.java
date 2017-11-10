@@ -33,10 +33,10 @@ public class ShowDataBaseK extends Activity {
             textView.setText(String.format("%s:%s ", c.getString(0), c.getString(1)));
             ImageView imageView = new ImageView(this);
             Bitmap picture;
-            picture = BitmapFactory.decodeByteArray(c.getBlob(2), 0, c.getBlob(2).length);
-            picture = createScaledBitmap(picture, 100, 100, false);
             if (c.getBlob(2) != null) {
                 //imageView.setImageBitmap(BitmapFactory.decodeByteArray(c.getBlob(2), 0, c.getBlob(2).length));
+                picture = BitmapFactory.decodeByteArray(c.getBlob(2), 0, c.getBlob(2).length);
+                picture = createScaledBitmap(picture, 100, 100, false);
                 imageView.setImageBitmap(picture);
             }
             mov = c.moveToNext();
