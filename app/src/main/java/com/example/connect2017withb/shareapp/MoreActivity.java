@@ -51,10 +51,14 @@ public class MoreActivity extends AppCompatActivity {
 
     private String[] seeList = {
             "fukei_mura", "リカチャン", "磐梯熱海温泉",
-            "郡山市ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
+            "ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
     };
     private String[] eatList= {
             "三万石", "柏屋", "かんの屋","エルマール"
+    };
+
+    private String[] playList = {
+            "ふれあい科学館"
     };
 
     @Override
@@ -82,6 +86,7 @@ public class MoreActivity extends AppCompatActivity {
         switch (tag){
             case "see": title.setText(seeList[gridPos]); break;
             case "eat": title.setText(eatList[gridPos]); break;
+            case "play": title.setText(playList[gridPos]); break;
             default:break;
         }
 

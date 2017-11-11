@@ -8,42 +8,27 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import android.widget.Button;
 /**
- * Created by Administrator on 2017/11/11.
+ * Created by jun_hasimoto on 2017/11/11.
  */
 
-public class SeeAdapter extends BaseAdapter {
+public class PlayAdapter extends BaseAdapter {
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
+
     private String[] mHueArray = {
-            "fukei_mura", "リカチャン", "磐梯熱海温泉",
-            "ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
+            "ふれあい科学館"
     };
     private Integer[] mHueIdArray = {
-            R.drawable.fukei_mura,
-            R.drawable.rikachan,
-            R.drawable.bandaia,
-            R.drawable.koriyama_hureai,
-            R.drawable.kaiseizan_park,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
-            R.drawable.abukumadou,
+            R.drawable.koriyama_hureai
     };
     private static class ViewHolder {
         public ImageView hueImageView;
-        public TextView  hueTextView;
+        public TextView hueTextView;
     }
 
-    public SeeAdapter(Context context) {
+    public PlayAdapter(Context context) {
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
     }
@@ -61,17 +46,19 @@ public class SeeAdapter extends BaseAdapter {
     }
 
 
+
+
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        SeeAdapter.ViewHolder holder;
+        PlayAdapter.ViewHolder holder;
         if (convertView == null) {
             convertView = mLayoutInflater.inflate(R.layout.grid_item_hue, null);
-            holder = new SeeAdapter.ViewHolder();
+            holder = new PlayAdapter.ViewHolder();
             holder.hueImageView = (ImageView)convertView.findViewById(R.id.hue_imageview);
             holder.hueTextView = (TextView)convertView.findViewById(R.id.hue_textview);
             convertView.setTag(holder);
         } else {
-            holder = (SeeAdapter.ViewHolder)convertView.getTag();
+            holder = (PlayAdapter.ViewHolder)convertView.getTag();
         }
 
         holder.hueImageView.setImageResource(mHueIdArray[position]);

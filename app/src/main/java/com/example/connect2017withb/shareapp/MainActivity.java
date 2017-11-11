@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 TextView hue_tv= (TextView)findViewById(R.id.text);
                 hue_tv.setText("遊ぶ");
                 e_tag = "play";
-//                GridView gridView = (GridView) findViewById(R.id.gridview);
-//                gridView.setAdapter(new SeeAdapter(getApplicationContext()));
+                GridView gridView = (GridView) findViewById(R.id.gridview);
+                gridView.setAdapter(new PlayAdapter(getApplicationContext()));
             }
         });
         Button miruButton = (Button) findViewById(R.id.button5);
