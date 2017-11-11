@@ -17,4 +17,18 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <!-- アプリのテーマ -->
+    <style name="AppTheme2" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:editTextStyle">@style/EditText</item>
+    </style>
+
+    <!-- EditTextのスタイル -->
+    <style name="EditText" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+
 </resources>
