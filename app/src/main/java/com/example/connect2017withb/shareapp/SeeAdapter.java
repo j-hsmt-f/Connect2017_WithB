@@ -18,13 +18,25 @@ public class SeeAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mLayoutInflater;
     private String[] mHueArray = {
-            "三万石", "柏屋", "かんの屋","エルマール"
+            "fukei_mura", "リカチャン", "磐梯熱海温泉",
+            "郡山市ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
     };
     private Integer[] mHueIdArray = {
-            R.drawable.sanmangoku,
-            R.drawable.kashiwaya,
-            R.drawable.kanoya,
-            R.drawable.erumaru,
+            R.drawable.fukei_mura,
+            R.drawable.rikachan,
+            R.drawable.bandaia,
+            R.drawable.koriyama_hureai,
+            R.drawable.kaiseizan_park,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
     };
     private static class ViewHolder {
         public ImageView hueImageView;

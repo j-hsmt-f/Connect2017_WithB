@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.content.Intent;
 
+import static com.example.connect2017withb.shareapp.R.id.floatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView fukei_mura;
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         GridView gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new HueAdapter(this));
 
-        FloatingActionButton fButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        FloatingActionButton fButton = (FloatingActionButton) findViewById(floatingActionButton);
         // ボタンに OnClickListener インターフェースを実装する
         fButton.setOnClickListener(new View.OnClickListener() {
 
@@ -41,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-                TextView hue_tv= (TextView)findViewById(R.id.text);
-                hue_tv.setText("食べる");
+//                TextView hue_tv= (TextView)findViewById(R.id.text);
+//                hue_tv.setText("食べる");
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
@@ -54,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-                TextView hue_tv= (TextView)findViewById(R.id.text);
-                hue_tv.setText("遊ぶ");
+//                TextView hue_tv= (TextView)findViewById(R.id.text);
+//                hue_tv.setText("遊ぶ");
             }
         });
         Button miruButton = (Button) findViewById(R.id.button5);
@@ -64,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-                TextView hue_tv= (TextView)findViewById(R.id.text);
-                hue_tv.setText("観る");
-                GridView gridView = (GridView) findViewById(R.id.gridview);
-                //gridView.setAdapter(new SeeAdapter(this));
+//                TextView hue_tv= (TextView)findViewById(R.id.text);
+//                hue_tv.setText("観る");
+                Intent intent = new Intent(getApplicationContext(), SightseeingActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -78,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-                TextView hue_tv= (TextView)findViewById(R.id.text);
-                hue_tv.setText("泊まる");
+//                TextView hue_tv= (TextView)findViewById(R.id.text);
+//                hue_tv.setText("泊まる");
             }
         });
 

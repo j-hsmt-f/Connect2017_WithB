@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    tools:context=".SightseeingActivity">
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/hue_imageview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:background="#000000"
+        />
+
+    <TextView
+        android:id="@+id/hue_textview"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/hue_imageview"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="000000"
+        android:textSize="14dp"
+        android:clickable="false"
+        />
+
+
+</RelativeLayout>
