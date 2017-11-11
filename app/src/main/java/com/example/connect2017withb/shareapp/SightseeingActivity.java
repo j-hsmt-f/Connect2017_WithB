@@ -1,4 +1,5 @@
 package com.example.connect2017withb.shareapp;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.content.Intent;
 
-public class MainActivity extends AppCompatActivity {
+public class SightseeingActivity extends AppCompatActivity {
 
     private TextView fukei_mura;
     private final static String TAG = MainActivity.class.getSimpleName();
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         GridView gridView = (GridView) findViewById(R.id.gridview);
-        gridView.setAdapter(new HueAdapter(this));
+        gridView.setAdapter(new SeeAdapter(this));
 
         Button button = (Button) findViewById(R.id.button7);
         // ボタンに OnClickListener インターフェースを実装する
@@ -57,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 hue_tv.setText("遊ぶ");
             }
         });
+
+
         Button miruButton = (Button) findViewById(R.id.button5);
         // ボタンに OnClickListener インターフェースを実装する
         miruButton.setOnClickListener(new View.OnClickListener() {
@@ -65,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 TextView hue_tv= (TextView)findViewById(R.id.text);
                 hue_tv.setText("観る");
-                GridView gridView = (GridView) findViewById(R.id.gridview);
-                //gridView.setAdapter(new SeeAdapter(this));
+                Intent intent = new Intent(getApplicationContext(), SightseeingActivity.class);
+                startActivity(intent);
             }
         });
 

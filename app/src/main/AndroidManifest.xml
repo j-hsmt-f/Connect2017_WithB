@@ -19,15 +19,15 @@
         <activity
             android:name=".DBActivity"
             android:label="@string/title_activity_db"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".KuchiActivity"
             android:label="@string/title_activity_db"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".MoreActivity" >
-        </activity>
-        <activity android:name=".ShowDataBase"></activity>
-        <activity android:name=".ShowDataBaseK"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MoreActivity"></activity>
+        <activity android:name=".ShowDataBase" />
+        <activity android:name=".ShowDataBaseK" />
+        <activity android:name=".SightseeingActivity"></activity>
     </application>
 
 </manifest>
