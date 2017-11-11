@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MoreActivity extends AppCompatActivity {
 
@@ -48,9 +49,22 @@ public class MoreActivity extends AppCompatActivity {
             R.drawable.pom
     };
 
+    private String[] seeList = {
+            "fukei_mura", "リカチャン", "磐梯熱海温泉",
+            "郡山市ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
+    };
+    private String[] eatList= {
+            "三万石", "柏屋", "かんの屋","エルマール"
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        int gridPos = intent.getIntExtra("gridId", 0);
+        String tag = intent.getStringExtra("tag");
+
         setContentView(R.layout.more);
 
         // ListViewのインスタンスを生成
@@ -63,6 +77,13 @@ public class MoreActivity extends AppCompatActivity {
 
         // ListViewにadapterをセット
         listView.setAdapter(adapter);
+
+        TextView title= (TextView)findViewById(R.id.titleText);
+        switch (tag){
+            case "see": title.setText(seeList[gridPos]); break;
+            case "eat": title.setText(eatList[gridPos]); break;
+        }
+
 
         Button button = (Button) findViewById(R.id.button7);
         // ボタンに OnClickListener インターフェースを実装する
