@@ -23,6 +23,9 @@ public class SightseeingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sightseeing);
 
+        /* アニメーション無効化 */
+        overridePendingTransition(0, 0);
+
         GridView gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new SeeAdapter(this));
 

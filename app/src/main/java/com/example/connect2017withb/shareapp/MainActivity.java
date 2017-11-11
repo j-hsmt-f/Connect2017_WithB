@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /* アニメーション無効化 */
+        overridePendingTransition(0, 0);
+
         GridView gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new HueAdapter(this));
 
