@@ -54,7 +54,15 @@
                 android:layout_toRightOf="@+id/button5"
                 android:text="泊まる" />
 
-
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/button6"
+                android:layout_alignBottom="@+id/button6"
+                android:layout_toEndOf="@+id/button6"
+                android:layout_toRightOf="@+id/button6"
+                android:text="ラーメン" />
         </LinearLayout>
 
         <LinearLayout
