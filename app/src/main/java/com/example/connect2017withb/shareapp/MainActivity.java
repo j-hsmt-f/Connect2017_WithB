@@ -46,10 +46,13 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-//                TextView hue_tv= (TextView)findViewById(R.id.text);
-//                hue_tv.setText("食べる");
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                TextView hue_tv= (TextView)findViewById(R.id.text);
+                hue_tv.setText("食べる");
+                GridView gridView = (GridView) findViewById(R.id.gridview);
+                gridView.setAdapter(new HueAdapter(getApplicationContext()));
+
+//              Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//              startActivity(intent);
             }
         });
 
@@ -59,8 +62,10 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-//                TextView hue_tv= (TextView)findViewById(R.id.text);
-//                hue_tv.setText("遊ぶ");
+                TextView hue_tv= (TextView)findViewById(R.id.text);
+                hue_tv.setText("遊ぶ");
+//                GridView gridView = (GridView) findViewById(R.id.gridview);
+//                gridView.setAdapter(new SeeAdapter(getApplicationContext()));
             }
         });
         Button miruButton = (Button) findViewById(R.id.button5);
@@ -69,10 +74,14 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-//                TextView hue_tv= (TextView)findViewById(R.id.text);
-//                hue_tv.setText("観る");
-                Intent intent = new Intent(getApplicationContext(), SightseeingActivity.class);
-                startActivity(intent);
+                TextView hue_tv= (TextView)findViewById(R.id.text);
+                hue_tv.setText("観る");
+//              Intent intent = new Intent(getApplicationContext(), SightseeingActivity.class);
+//              startActivity(intent);
+
+                GridView gridView = (GridView) findViewById(R.id.gridview);
+                gridView.setAdapter(new SeeAdapter(getApplicationContext()));
+
             }
         });
 
