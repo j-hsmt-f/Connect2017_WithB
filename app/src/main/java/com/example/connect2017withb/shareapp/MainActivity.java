@@ -1,5 +1,6 @@
 package com.example.connect2017withb.shareapp;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -22,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         GridView gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new HueAdapter(this));
 
-        Button button = (Button) findViewById(R.id.button7);
+        FloatingActionButton fButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         // ボタンに OnClickListener インターフェースを実装する
-        button.setOnClickListener(new View.OnClickListener() {
+        fButton.setOnClickListener(new View.OnClickListener() {
 
             // クリック時に呼ばれるメソッド
             @Override
