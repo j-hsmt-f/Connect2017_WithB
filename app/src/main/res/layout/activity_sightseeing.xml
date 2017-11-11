@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SightseeingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,25 +12,6 @@
         android:orientation="vertical"
         android:paddingTop="0dp">
 
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:background="#e0c1ff">
-
-            <TextView
-                android:id="@id/text"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-
-                android:text="食べる"
-                android:textColor="#000000"
-                android:textSize="30dp" />
-
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="55dp"
@@ -82,6 +63,26 @@
                 android:layout_toEndOf="@+id/button6"
                 android:layout_toRightOf="@+id/button6"
                 android:text="ラーメン" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#e0c1ff">
+
+            <TextView
+                android:id="@id/text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+
+                android:text="観る"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
         </LinearLayout>
 
         <GridView
@@ -95,8 +96,7 @@
             android:minHeight="100dp"
             android:numColumns="auto_fit"
             android:stretchMode="columnWidth"
-            android:verticalSpacing="8dp"
-            android:paddingTop="10dp"/>
+            android:verticalSpacing="8dp" />
 
     </LinearLayout>
 

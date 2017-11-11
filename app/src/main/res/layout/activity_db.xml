@@ -8,6 +8,7 @@
 
     <Spinner
         android:id="@+id/cboCat"
+        android:background="@drawable/edit_text"
         android:layout_width="221dp"
         android:layout_height="30dp"
         android:layout_alignLeft="@+id/txtPlace"
@@ -26,6 +27,7 @@
         android:layout_alignStart="@+id/cboCat"
         android:layout_marginTop="27dp"
         android:text="カテゴリ"
+        android:textSize="18sp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="26dp" />
 
@@ -38,6 +40,7 @@
         android:layout_toEndOf="@+id/imageView"
         android:layout_toRightOf="@+id/imageView"
         android:text="場所名"
+        android:textSize="18sp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="103dp" />
 
@@ -50,6 +53,7 @@
         android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:background="@drawable/edit_text"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="132dp" />
 
@@ -64,6 +68,7 @@
         android:layout_toEndOf="@+id/btnShow"
         android:layout_toRightOf="@+id/btnShow"
         android:text="登録"
+        android:background="@drawable/button_customize"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="447dp" />
 
@@ -76,6 +81,7 @@
         android:layout_toEndOf="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
         android:text="中身"
+        android:background="@drawable/button_customize"
         tools:layout_editor_absoluteX="229dp"
         tools:layout_editor_absoluteY="447dp" />
 
@@ -86,7 +92,8 @@
         android:layout_alignEnd="@+id/txtPlace"
         android:layout_alignRight="@+id/txtPlace"
         android:layout_below="@+id/imageView"
-        android:text="全削除" />
+        android:text="全削除"
+        android:background="@drawable/button_customize"/>
 
     <TextView
         android:id="@+id/lblPic"
@@ -96,7 +103,8 @@
         android:layout_alignStart="@+id/txtPlace"
         android:layout_below="@+id/txtPlace"
         android:layout_marginTop="18dp"
-        android:text="画像" />
+        android:text="画像"
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/btnFile"
@@ -106,7 +114,8 @@
         android:layout_alignStart="@+id/txtPlace"
         android:layout_below="@+id/txtPlace"
         android:layout_marginTop="51dp"
-        android:text="参照" />
+        android:text="参照"
+        android:background="@drawable/button_customize"/>
 
     <ImageView
         android:id="@+id/imageView"

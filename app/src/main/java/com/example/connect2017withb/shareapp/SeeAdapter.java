@@ -9,31 +9,41 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import android.widget.Button;
-
 /**
- * Created by Administrator on 2017/11/06.
+ * Created by Administrator on 2017/11/11.
  */
 
-public class HueAdapter extends BaseAdapter {
+public class SeeAdapter extends BaseAdapter {
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
-
     private String[] mHueArray = {
-            "三万石", "柏屋", "かんの屋","エルマール"
+            "fukei_mura", "リカチャン", "磐梯熱海温泉",
+            "ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
     };
     private Integer[] mHueIdArray = {
-            R.drawable.sanmangoku,
-            R.drawable.kashiwaya,
-            R.drawable.kanoya,
-            R.drawable.erumaru,
+            R.drawable.fukei_mura,
+            R.drawable.rikachan,
+            R.drawable.bandaia,
+            R.drawable.koriyama_hureai,
+            R.drawable.kaiseizan_park,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
+            R.drawable.abukumadou,
     };
     private static class ViewHolder {
         public ImageView hueImageView;
         public TextView  hueTextView;
     }
 
-    public HueAdapter(Context context) {
+    public SeeAdapter(Context context) {
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
     }
@@ -51,19 +61,17 @@ public class HueAdapter extends BaseAdapter {
     }
 
 
-
-
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ViewHolder holder;
+        SeeAdapter.ViewHolder holder;
         if (convertView == null) {
             convertView = mLayoutInflater.inflate(R.layout.grid_item_hue, null);
-            holder = new ViewHolder();
+            holder = new SeeAdapter.ViewHolder();
             holder.hueImageView = (ImageView)convertView.findViewById(R.id.hue_imageview);
             holder.hueTextView = (TextView)convertView.findViewById(R.id.hue_textview);
             convertView.setTag(holder);
         } else {
-            holder = (ViewHolder)convertView.getTag();
+            holder = (SeeAdapter.ViewHolder)convertView.getTag();
         }
 
         holder.hueImageView.setImageResource(mHueIdArray[position]);

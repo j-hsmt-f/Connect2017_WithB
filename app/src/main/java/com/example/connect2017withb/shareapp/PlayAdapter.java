@@ -8,32 +8,27 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import android.widget.Button;
-
 /**
- * Created by Administrator on 2017/11/06.
+ * Created by jun_hasimoto on 2017/11/11.
  */
 
-public class HueAdapter extends BaseAdapter {
+public class PlayAdapter extends BaseAdapter {
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
 
     private String[] mHueArray = {
-            "三万石", "柏屋", "かんの屋","エルマール"
+            "ふれあい科学館"
     };
     private Integer[] mHueIdArray = {
-            R.drawable.sanmangoku,
-            R.drawable.kashiwaya,
-            R.drawable.kanoya,
-            R.drawable.erumaru,
+            R.drawable.koriyama_hureai
     };
     private static class ViewHolder {
         public ImageView hueImageView;
-        public TextView  hueTextView;
+        public TextView hueTextView;
     }
 
-    public HueAdapter(Context context) {
+    public PlayAdapter(Context context) {
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
     }
@@ -55,15 +50,15 @@ public class HueAdapter extends BaseAdapter {
 
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ViewHolder holder;
+        PlayAdapter.ViewHolder holder;
         if (convertView == null) {
             convertView = mLayoutInflater.inflate(R.layout.grid_item_hue, null);
-            holder = new ViewHolder();
+            holder = new PlayAdapter.ViewHolder();
             holder.hueImageView = (ImageView)convertView.findViewById(R.id.hue_imageview);
             holder.hueTextView = (TextView)convertView.findViewById(R.id.hue_textview);
             convertView.setTag(holder);
         } else {
-            holder = (ViewHolder)convertView.getTag();
+            holder = (PlayAdapter.ViewHolder)convertView.getTag();
         }
 
         holder.hueImageView.setImageResource(mHueIdArray[position]);
