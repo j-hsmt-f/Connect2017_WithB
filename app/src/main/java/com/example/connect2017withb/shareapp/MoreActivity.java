@@ -1,7 +1,10 @@
 package com.example.connect2017withb.shareapp;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class MoreActivity extends AppCompatActivity {
@@ -61,5 +64,13 @@ public class MoreActivity extends AppCompatActivity {
         // ListViewにadapterをセット
         listView.setAdapter(adapter);
 
+        Button detaBaseButton = (Button) findViewById(R.id.btnShow);
+        detaBaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.MoreActivity.this, ShowDataBase.class);
+                startActivity(dbIntent);
+            }
+        });
     }
 }
