@@ -59,6 +59,7 @@
         android:background="#e0c1ff">
 
         <TextView
+            android:id="@+id/titleText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_weight="1"

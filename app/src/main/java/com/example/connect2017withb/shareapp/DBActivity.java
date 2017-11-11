@@ -2,24 +2,21 @@ package com.example.connect2017withb.shareapp;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
-import android.provider.ContactsContract;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Spinner;
-import java.net.*;
 
 import java.io.*;
 import static android.graphics.Bitmap.createScaledBitmap;
@@ -35,7 +32,7 @@ public class DBActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_db);
 
-        //deleteDatabase("NameAgeDB");
+        //deleteDatabase("PlaceDB");
 
         MyOpenHelper helper = new MyOpenHelper(this);
         final SQLiteDatabase db = helper.getWritableDatabase();
@@ -65,7 +62,19 @@ public class DBActivity extends Activity {
                 insertValues.put("name", name);
                 insertValues.put("category", item);
                 insertValues.put("pic", bitmapdata);
-                long id = db.insert("person", name, insertValues);
+                long id = db.insert("place", name, insertValues);
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(DBActivity.this);
+                alert.setTitle("観光地登録");
+                alert.setMessage("DB登録が完了しました！");
+                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                alert.show();
             }
         });
 
@@ -73,7 +82,7 @@ public class DBActivity extends Activity {
         deleteAllButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                db.delete("person", null, null);
+                db.delete("place", null, null);
 
             }
         });
@@ -83,6 +92,7 @@ public class DBActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, ShowDataBase.class);
+                //Intent dbIntent = new Intent(com.example.connect2017withb.shareapp.DBActivity.this, KuchiActivity.class);
                 startActivity(dbIntent);
             }
         });

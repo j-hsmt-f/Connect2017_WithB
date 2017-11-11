@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyOpenHelper extends SQLiteOpenHelper {
     public MyOpenHelper(Context context) {
-        super(context, "PlaceDB", null, 1);
+        super(context, "PlaceDB", null, 2);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -14,6 +14,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //db.execSQL("drop table person");
+        //db.execSQL("drop table place");
     }
 }
