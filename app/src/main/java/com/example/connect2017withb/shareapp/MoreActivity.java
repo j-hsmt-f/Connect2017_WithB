@@ -49,9 +49,12 @@ public class MoreActivity extends AppCompatActivity {
             R.drawable.pom
     };
 
-    private String[] mHueArray = {
+    private String[] seeList = {
             "fukei_mura", "リカチャン", "磐梯熱海温泉",
             "郡山市ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
+    };
+    private String[] eatList= {
+            "三万石", "柏屋", "かんの屋","エルマール"
     };
 
     @Override
@@ -60,6 +63,7 @@ public class MoreActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         int gridPos = intent.getIntExtra("gridId", 0);
+        String tag = intent.getStringExtra("tag");
 
         setContentView(R.layout.more);
 
@@ -75,7 +79,10 @@ public class MoreActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         TextView title= (TextView)findViewById(R.id.titleText);
-        title.setText(mHueArray[gridPos]);
+        switch (tag){
+            case "see": title.setText(seeList[gridPos]); break;
+            case "eat": title.setText(eatList[gridPos]); break;
+        }
 
 
         Button button = (Button) findViewById(R.id.button7);

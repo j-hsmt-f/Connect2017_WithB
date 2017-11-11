@@ -30,7 +30,16 @@ public class SightseeingActivity extends AppCompatActivity {
         gridView.setAdapter(new SeeAdapter(this));
 
         FloatingActionButton fButton = (FloatingActionButton) findViewById(floatingActionButton);
+        // ボタンに OnClickListener インターフェースを実装する
+        fButton.setOnClickListener(new View.OnClickListener() {
 
+            // クリック時に呼ばれるメソッド
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), DBActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Button taberuButton = (Button) findViewById(R.id.button);
         // ボタンに OnClickListener インターフェースを実装する
@@ -88,6 +97,7 @@ public class SightseeingActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
                 intent.putExtra("gridId", position);
+                intent.putExtra("tag", "see");
                 startActivity(intent);
             }
         });
