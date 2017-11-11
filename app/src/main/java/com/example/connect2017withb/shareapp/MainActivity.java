@@ -14,8 +14,7 @@ import static com.example.connect2017withb.shareapp.R.id.floatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView fukei_mura;
-    private final static String TAG = MainActivity.class.getSimpleName();
+    private String e_tag = "eat";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 TextView hue_tv= (TextView)findViewById(R.id.text);
                 hue_tv.setText("食べる");
+                e_tag = "eat";
                 GridView gridView = (GridView) findViewById(R.id.gridview);
                 gridView.setAdapter(new HueAdapter(getApplicationContext()));
 
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 TextView hue_tv= (TextView)findViewById(R.id.text);
                 hue_tv.setText("遊ぶ");
+                e_tag = "play";
 //                GridView gridView = (GridView) findViewById(R.id.gridview);
 //                gridView.setAdapter(new SeeAdapter(getApplicationContext()));
             }
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 TextView hue_tv= (TextView)findViewById(R.id.text);
                 hue_tv.setText("観る");
+                e_tag = "see";
 //              Intent intent = new Intent(getApplicationContext(), SightseeingActivity.class);
 //              startActivity(intent);
 
@@ -92,8 +94,9 @@ public class MainActivity extends AppCompatActivity {
             // クリック時に呼ばれるメソッド
             @Override
             public void onClick(View view) {
-//                TextView hue_tv= (TextView)findViewById(R.id.text);
-//                hue_tv.setText("泊まる");
+                TextView hue_tv= (TextView)findViewById(R.id.text);
+                hue_tv.setText("泊まる");
+                e_tag = "stop";
             }
         });
 
@@ -103,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
                 intent.putExtra("gridId", position);
-                intent.putExtra("tag", "eat");
+                intent.putExtra("tag", e_tag);
                 startActivity(intent);
             }
         });

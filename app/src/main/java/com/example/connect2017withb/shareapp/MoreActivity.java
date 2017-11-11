@@ -82,6 +82,7 @@ public class MoreActivity extends AppCompatActivity {
         switch (tag){
             case "see": title.setText(seeList[gridPos]); break;
             case "eat": title.setText(eatList[gridPos]); break;
+            default:break;
         }
 
 
