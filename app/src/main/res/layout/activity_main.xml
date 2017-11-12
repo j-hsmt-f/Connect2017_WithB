@@ -105,12 +105,13 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"  />
+        android:clickable="true"
+        app:backgroundTint="@android:color/background_light"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </RelativeLayout>
 
