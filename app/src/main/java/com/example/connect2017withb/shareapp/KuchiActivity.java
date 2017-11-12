@@ -71,7 +71,9 @@ public class KuchiActivity extends Activity {
                 alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
+                        intent.putExtra("gridId", 0);
+                        intent.putExtra("tag", "eat");
                         startActivity(intent);
                     }
                 });
