@@ -20,13 +20,18 @@ public class HueAdapter extends BaseAdapter {
     private LayoutInflater mLayoutInflater;
 
     private String[] mHueArray = {
-            "三万石", "柏屋", "かんの屋","エルマール"
+            "三万石", "柏屋", "かんの屋","エルマール","仁亭","萬壽園","大友パン","たらふく亭","佐藤珈琲"
     };
     private Integer[] mHueIdArray = {
             R.drawable.sanmangoku,
             R.drawable.kashiwaya,
             R.drawable.kanoya,
             R.drawable.erumaru,
+            R.drawable.jintei,
+            R.drawable.manjuen,
+            R.drawable.otomopan,
+            R.drawable.tarahukutei,
+            R.drawable.satocoffee
     };
     private static class ViewHolder {
         public ImageView hueImageView;

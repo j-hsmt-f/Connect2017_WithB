@@ -54,7 +54,7 @@ public class MoreActivity extends AppCompatActivity {
             "ふれあい科学館", "開成山公園","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞","阿武隈洞"
     };
     private String[] eatList= {
-            "三万石", "柏屋", "かんの屋","エルマール"
+            "三万石", "柏屋", "かんの屋","エルマール","仁亭","萬壽園","大友パン","たらふく亭","佐藤珈琲"
     };
 
     private String[] playList = {
